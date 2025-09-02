@@ -543,10 +543,11 @@ export const SETTINGS: Settings = {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
         default: null,
     },
+    //changed default to false
     "sendReadReceipts": {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
         displayName: _td("settings|send_read_receipts"),
-        default: true,
+        default: false,
         controller: new ServerSupportUnstableFeatureController(
             "sendReadReceipts",
             defaultWatchManager,
@@ -777,10 +778,11 @@ export const SETTINGS: Settings = {
         default: true,
         invertedSettingName: "hideDisplaynameChanges",
     },
+    //changed default to false
     "showReadReceipts": {
         supportedLevels: LEVELS_ROOM_SETTINGS,
         displayName: _td("settings|show_read_receipts"),
-        default: true,
+        default: false,
         invertedSettingName: "hideReadReceipts",
     },
     "showTwelveHourTimestamps": {
@@ -861,16 +863,20 @@ export const SETTINGS: Settings = {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
         default: false,
     },
+    //change default to false
     "sendTypingNotifications": {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
         displayName: _td("settings|send_typing_notifications"),
-        default: true,
+        default: false,
         invertedSettingName: "dontSendTypingNotifications",
     },
+    //change default to false
     "showTypingNotifications": {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
         displayName: _td("settings|show_typing_notifications"),
-        default: true,
+        default: false,
+        description : () => <span>Mental Wellbeing: Diese Form der Benachrichtigung kann zur Entstehung von sozialen Druck beitragen. </span>
+
     },
     "ctrlFForSearch": {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
@@ -1089,12 +1095,12 @@ export const SETTINGS: Settings = {
     },
     "notificationBodyEnabled": {
         supportedLevels: LEVELS_DEVICE_ONLY_SETTINGS,
-        default: true,
+        default: false,
         controller: new NotificationBodyEnabledController(),
     },
     "audioNotificationsEnabled": {
         supportedLevels: LEVELS_DEVICE_ONLY_SETTINGS,
-        default: true,
+        default: false,
     },
     "enableWidgetScreenshots": {
         supportedLevels: LEVELS_ACCOUNT_SETTINGS,
