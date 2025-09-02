@@ -869,6 +869,7 @@ export const SETTINGS: Settings = {
         displayName: _td("settings|send_typing_notifications"),
         default: false,
         invertedSettingName: "dontSendTypingNotifications",
+        description : () => <span>Mental Wellbeing: Diese Form der Benachrichtigung kann zur Entstehung von sozialen Druck beitragen. </span>
     },
     //change default to false
     "showTypingNotifications": {
